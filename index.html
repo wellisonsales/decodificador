@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+    <title>Decodificador</title>
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="cabecalho_principal">
+            <h1 class="titulo">Decodificador</h1>
+            <p class="descricao"><strong>Atenção:</strong> digite apenas letras minúsculas e sem acentos.</p>
+        </div>
+    </header>
+
+    <main class="conteudo">
+
+        <div class="container"> 
+
+            <!-- box de input esquerdo  -->
+             <textarea id="boxstyle_l" name="boxleft" rows="15" cols=60> </textarea>
+
+             <!-- box de resultado direito  -->
+            <textarea id="boxstyle_r" name="boxright" rows="15" cols=60> </textarea>
+
+            <!-- seletores lado esquerdo -->
+            <section class="seletores">
+                <input type="radio" id="Cifra_de_cesar" name="seletor_codificar" value="cifra_de_cesar">
+                <label for="html">Codificar</label><br>
+                <input type="radio" id="base64" name="seletor_base64" value="base65">
+                <label for="css">Decodificar</label>
+            </section>
+       
+            <!-- Incremento -->
+            <form class="incrementostyle" id="incremento" action="">
+                <label name="incremento" for="">Qual número você quer usar?</label>
+                <input  name="incrementoinput" type="number" placeholder="Escolha um número">
+            </form>
+           </div>
+
+        </div>
+    
+
+    </main>
+
+    <link href="index.js" rel="text/javascript">
+</body>
+</html>
