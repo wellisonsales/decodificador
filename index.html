@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,32 +23,48 @@
 
         <div class="container"> 
 
-            <!-- box de input esquerdo  -->
-             <textarea id="boxstyle_l" name="boxleft" rows="15" cols=60> </textarea>
+            <!-- não esquecer: "textDaEsqueda" representa o bloco esquerdo onde o usuário
+            deve colocar o texto de entrada. "textDaDireita" são as informações de saída que
+            deveriam sair criptografadas.-->
 
-             <!-- box de resultado direito  -->
-            <textarea id="boxstyle_r" name="boxright" rows="15" cols=60> </textarea>
+            <div>
+                <textarea id="textDaEsquerda" name=""  rows="15" cols=60> </textarea>
+                <textarea id="textDaDireita" name="" rows="15" cols=60> </textarea>
+            </div>
+            
+                <!--Campo de seleção de "codificar e "decodificar"-->
 
-            <!-- seletores lado esquerdo -->
-            <section class="seletores">
-                <input type="radio" id="Cifra_de_cesar" name="seletor_codificar" value="cifra_de_cesar">
-                <label for="html">Codificar</label><br>
-                <input type="radio" id="base64" name="seletor_base64" value="base65">
-                <label for="css">Decodificar</label>
-            </section>
+                <form class="seletor">
+                    <section class="seletores">
+                        <input type="radio" id="radioCod" name="seletor_codificar" value="cod">
+                            <label for="html" id="codificar" type="radio" nome="radio">Codificar</label><br>
+                        <input type="radio" id="radioDecod" name="seletor_codificar" value="decod">
+                            <label for="css" id="decodificar" type="radio" name="radio">Decodificar</label>
+                     </section>
+          
        
-            <!-- Incremento -->
-            <form class="incrementostyle" id="incremento" action="">
-                <label name="incremento" for="">Qual número você quer usar?</label>
-                <input  name="incrementoinput" type="number" placeholder="Escolha um número">
-            </form>
-           </div>
+                    <!--Campo de seleção de "base64" e "cifra"-->
+                     <select class="option" id="option" name="option">
+                        <option value="0" selected disabled>Selecione um tipo de criptografia:</option>
+                        <option value="1" id="base64">Base64</option>
+                        <option value="2" id="cifra">Cifra</option>
+                    </select>
+
+                    <!-- número de incremento, passos, que deve ser criptografado-->
+                    <input id="chaves" type="number" placeholder="Escolha um número">
+                </form>
+
+                <!--botão de enviar-->
+                <!-- <div id="mostre">
+                    <input value="Enviar" id="botao" class="send" type="submit">
+                  </div>
+                </div> -->
 
         </div>
     
 
     </main>
 
-    <link href="index.js" rel="text/javascript">
+    <script src="./index.js"> </script>
 </body>
 </html>
